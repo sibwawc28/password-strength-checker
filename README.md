@@ -1,0 +1,1 @@
+this is a simple program to check the strength of a password based on the criterias mentioned in the program itself. (loll I could've just written those criterias here but now I'm too lazy to push my code again)
