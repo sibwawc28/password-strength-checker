@@ -1,0 +1,34 @@
+#  let's assume these are the conditions for strong password
+# 8 characters minimum
+# at least one lowercase character
+# at least one uppercase chaarcter
+# at least one special symbol
+# at least one number
+
+import string
+
+lower= string.ascii_lowercase   #not (), cuz they're not functions but constants
+upper= string.ascii_uppercase
+num=string.digits
+punct=string.punctuation
+
+def pwchecker(word):
+
+    # 'any' returns True or False
+    has_lower = any(ch in lower for ch in word)
+    has_upper = any(ch in upper for ch in word)
+    has_num   = any(ch in num for ch in word)
+    has_punct = any(ch in punct for ch in word)
+
+    if len(word)>8 and has_lower and has_upper and has_num and has_punct:
+        return 1
+    else:
+        return 0
+
+password=input("Enter your password to check its strength ")
+ans=pwchecker(password)
+
+if(ans==1):
+    print("congrats queen, your password is strong")
+else:
+    print("my condolences. your pw ain't strong. go to my password generator repository to get a strong one")
